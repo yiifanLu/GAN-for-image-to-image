@@ -1,0 +1,34 @@
+{
+  "name": "013_seperate_CFM_diffuse_new",
+  "suffix": "_sep_diffuse",
+  "image_type": "png",
+  "model": "GIGAN",
+  "scale": 4,
+  "gpu_ids": [ 0 ],
+  "datasets": {
+    "test": { // the 1st test dataset
+      "name": "train_Tencent_deep_inverse_rendering",
+      "mode": "Tencent_deep_inverse_rendering",
+      "feature": [ "albedo", "normal", "depth" ],
+      "dataroot_GT": "E:/dataset/test",
+      "dataroot_NOISY": "E:/dataset/test"
+     
+      // , "GT_size": 512
+    }
+
+  },
+  "path": {
+    "root": "D:/chengdu/Tencent/codes/pytorch",
+    "val_root": "D:/chengdu/Tencent/codes/pytorch"
+    //FINAL
+    ,
+    "pretrain_model_G": "D:/chengdu/Tencent/codes/pytorch/300000_G.pth"
+
+  },
+  "network_G": {
+    "which_model_G": "U-net"
+  }
+
+
+
+}
